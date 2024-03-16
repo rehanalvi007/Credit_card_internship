@@ -1,55 +1,46 @@
-import pandas as pd
-import numpy as np
-from src.CreditCardDefaultPrediction.logger import logging
-from src.CreditCardDefaultPrediction.exception import customexception
-
 import os
 import sys
+
+from src.CreditCardDefaultPrediction.logger import logging
+from src.CreditCardDefaultPrediction.exception import CustomException
+
 from sklearn.model_selection import train_test_split
+import pandas as pd
 from dataclasses import dataclass
-from pathlib import Path
 
+
+# Initialize the data ingestion configuration
+
+@dataclass
 class DataIngestionConfig:
-    raw_data_path:str=os.path.join("artifacts","raw.csv")
-    train_data_path:str=os.path.join("artifacts","train.csv")
-    test_data_path:str=os.path.join("artifacts","test.csv")
-
+    train_path: str = os.path.join('artifacts', 'train.csv')
+    test_path: str = os.path.join('artifacts', 'test.csv')
+    raw_path: str = os.path.join('artifacts', 'raw.csv')
 
 class DataIngestion:
     def __init__(self):
-        self.ingestion_config=DataIngestionConfig()
-        
-    
+        self.ingestion_config = DataIngestionConfig()
+
     def initiate_data_ingestion(self):
-        logging.info("data ingestion started")
-        
+        logging.info("Data ingestion method starts.")
         try:
-            data=pd.read_csv(Path(os.path.join("notebooks/data","UCI_Credit_Card.csv")))
-            logging.info(" i have read dataset as a df")
-            
-            
-            os.makedirs(os.path.dirname(os.path.join(self.ingestion_config.raw_data_path)),exist_ok=True)
-            data.to_csv(self.ingestion_config.raw_data_path,index=False)
-            logging.info(" i have saved the raw dataset in artifact folder")
-            
-            logging.info("here i have performed train test split")
-            
-            train_data,test_data=train_test_split(data,test_size=0.25)
-            logging.info("train test split completed")
-            
-            train_data.to_csv(self.ingestion_config.train_data_path,index=False)
-            test_data.to_csv(self.ingestion_config.test_data_path,index=False)
-            
-            logging.info("data ingestion part completed")
-            
-            return (
-                 
-                
-                self.ingestion_config.train_data_path,
-                self.ingestion_config.test_data_path
-            )
-            
-            
+            df = pd.read_csv(os.path.join('notebooks/data', 'UCI_Credit_Card.csv'))
+            logging.info("Reading data from database")
+
+            os.makedirs(os.path.dirname(self.ingestion_config.raw_path), exist_ok=True)
+            df.to_csv(self.ingestion_config.raw_path, index=False)
+
+            logging.info("Train test split")
+            train_set, test_set = train_test_split(df, test_size=0.2, random_state=30)
+
+            train_set.to_csv(self.ingestion_config.train_path, index=False, header=True)
+            test_set.to_csv(self.ingestion_config.test_path, index=False, header=True)
+
+            logging.info("Data ingestion completed")
+
+            return (self.ingestion_config.train_path,
+                    self.ingestion_config.test_path)
+
         except Exception as e:
-           logging.info("exception during occured at data ingestion stage")
-           raise customexception(e,sys)
+            logging.info("An exception has occurred in Data ingestion method.")
+            raise CustomException(e, sys)
