@@ -68,4 +68,8 @@ except Exception as e:
 
 
 if __name__ == "__main__":
+<<<<<<< HEAD
     app.run(host="0.0.0.0", port=8080)
+=======
+    app.run(host="0.0.0.0", port = 8080)
+>>>>>>> d525094ebd3fc0047a31ee6a6318d0a8b492cfc4
