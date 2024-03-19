@@ -25,7 +25,7 @@ class ModelEvaluation:
             model_path = os.path.join("artifacts", "model.pkl")
             model = load_object(model_path)
 
-            mlflow.set_registry_uri("https://dagshub.com/gouthamikrishnamurthy/CreditCardFaultDetection.mlflow")
+            mlflow.set_registry_uri("")
             
             tracking_url_type_store = urlparse(mlflow.get_tracking_uri()).scheme
             print(tracking_url_type_store)
