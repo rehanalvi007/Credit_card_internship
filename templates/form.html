@@ -116,7 +116,7 @@
         </div>
         
         <div class="form-group">
-            <label for="SEX">SEX</label>
+            <label for="SEX">Gender</label>
             <select name="SEX" id="SEX">
                 <option value="1">Male</option>
                 <option value="2">Female</option>
@@ -138,9 +138,11 @@
 
 
         <!-- Continue this pattern for values 4 to 23 -->
+        <div class="pay-group">
+          <label for="PAY">Repayment Status:</label>
 
         <div class="form-group">
-            <label for="PAY_0">PAY_0</label>
+            <label for="PAY_0">April</label>
             <select name="PAY_0" id="PAY_0">
                 <option value="-2">Zero credit</option>
                 <option value="-1">Full Payment paid</option>
@@ -158,7 +160,7 @@
         </div>
 
         <div class="form-group">
-            <label for="PAY_2">PAY_2</label>
+            <label for="PAY_2">May</label>
             <select name="PAY_2" id="PAY_2">
                 <option value="-2">Zero credit</option>
                 <option value="-1">Full Payment paid</option>
@@ -176,7 +178,7 @@
         </div>
 
         <div class="form-group">
-            <label for="PAY_3">PAY_3</label>
+            <label for="PAY_3">June</label>
             <select name="PAY_3" id="PAY_3">
                 <option value="-2">Zero credit</option>
                 <option value="-1">Full Payment paid</option>
@@ -194,7 +196,7 @@
         </div>
 
         <div class="form-group">
-            <label for="PAY_4">PAY_4</label>
+            <label for="PAY_4">July</label>
             <select name="PAY_4" id="PAY_4">
                 <option value="-2">Zero credit</option>
                 <option value="-1">Full Payment paid</option>
@@ -212,7 +214,7 @@
         </div>
 
         <div class="form-group">
-            <label for="PAY_5">PAY_5</label>
+            <label for="PAY_5">August</label>
             <select name="PAY_5" id="PAY_5">
                 <option value="-2">Zero credit</option>
                 <option value="-1">Full Payment paid</option>
@@ -230,7 +232,7 @@
         </div>
 
         <div class="form-group">
-            <label for="PAY_6">PAY_6</label>
+            <label for="PAY_6">September</label>
             <select name="PAY_6" id="PAY_6">
                 <option value="-2">Zero credit</option>
                 <option value="-1">Full Payment paid</option>
@@ -246,74 +248,91 @@
                 <option value="9">Payment delay for nine months and above</option>
             </select>
         </div>
-
         <div class="form-group">
-        <label for="LIMIT_BAL">LIMIT_BAL</label>
-        <input type="text" id="LIMIT_BAL" name="LIMIT_BAL"><br>
-        </div>
+          <label for="LIMIT_BAL">Limit Balance: <span>(Amount of given credit in dollars includes individual and family/supplementary credit)</span></label>
+          <input type="text" id="LIMIT_BAL" name="LIMIT_BAL" placeholder="Amount in dollars">
+      </div>
+
 
         <div class="form-group">
         <label for="AGE">AGE</label>
-        <input type="text" id="AGE" name="AGE"><br>
+        <input type="text" id="AGE" name="AGE" placeholder="in years"><br>
         </div>
 
         <div class="form-group">
-        <label for="BILL_AMT1">BILL_AMT1</label>
+          <div style="display: flex; align-items: center;">
+              <span style="font-size: 18px; font-weight: bold; margin-right: 10px;">Bill Amounts:</span>
+              <span style="font-size: 14px; color: #666;">(Amount of bill statements in dollars)</span>
+          </div>
+      </div>
+      
+      <div class="pay-subgroup">
+
+        <div class="form-group">
+        <label for="BILL_AMT1">April</label>
         <input type="text" id="BILL_AMT1" name="BILL_AMT1"><br>
         </div>
 
         <div class="form-group">
-        <label for="BILL_AMT2">BILL_AMT2</label>
+        <label for="BILL_AMT2">May</label>
         <input type="text" id="BILL_AMT2" name="BILL_AMT2"><br>
         </div>
 
         <div class="form-group">
-        <label for="BILL_AMT3">BILL_AMT3</label>
+        <label for="BILL_AMT3">June</label>
         <input type="text" id="BILL_AMT3" name="BILL_AMT3"><br>
         </div>
 
         <div class="form-group">
-        <label for="BILL_AMT4">BILL_AMT4</label>
+        <label for="BILL_AMT4">July</label>
         <input type="text" id="BILL_AMT4" name="BILL_AMT4"><br>
         </div>
 
         <div class="form-group">
-        <label for="BILL_AMT5">BILL_AMT5</label>
+        <label for="BILL_AMT5">August</label>
         <input type="text" id="BILL_AMT5" name="BILL_AMT5"><br>
         </div>
 
         <div class="form-group">
-        <label for="BILL_AMT6">BILL_AMT6</label>
+        <label for="BILL_AMT6">September</label>
         <input type="text" id="BILL_AMT6" name="BILL_AMT6"><br>
         </div>
+        <div class="form-group">
+          <div style="display: flex; align-items: center;">
+              <span style="font-size: 18px; font-weight: bold; margin-right: 10px;">Previous Payments:</span>
+              <span style="font-size: 14px; color: #666;">(Amount of previous payments(in dollar))</span>
+          </div>
+      </div>
+      
+      <div class="pay-subgroup">
 
         <div class="form-group">
-        <label for="PAY_AMT1">PAY_AMT1</label>
+        <label for="PAY_AMT1">April</label>
         <input type="text" id="PAY_AMT1" name="PAY_AMT1"><br>
         </div>
 
         <div class="form-group">
-        <label for="PAY_AMT2">PAY_AMT2</label>
+        <label for="PAY_AMT2">May</label>
         <input type="text" id="PAY_AMT2" name="PAY_AMT2"><br>
         </div>
 
         <div class="form-group">
-        <label for="PAY_AMT3">PAY_AMT3</label>
+        <label for="PAY_AMT3">June</label>
         <input type="text" id="PAY_AMT3" name="PAY_AMT3"><br>
         </div>
 
         <div class="form-group">
-        <label for="PAY_AMT4">PAY_AMT4</label>
+        <label for="PAY_AMT4">July</label>
         <input type="text" id="PAY_AMT4" name="PAY_AMT4"><br>
         </div>
 
         <div class="form-group">
-        <label for="PAY_AMT5">PAY_AMT5</label>
+        <label for="PAY_AMT5">August</label>
         <input type="text" id="PAY_AMT5" name="PAY_AMT5"><br>
         </div>
 
         <div class="form-group">
-        <label for="PAY_AMT6">PAY_AMT6</label>
+        <label for="PAY_AMT6">September</label>
         <input type="text" id="PAY_AMT6" name="PAY_AMT6"><br>
         </div>
 
