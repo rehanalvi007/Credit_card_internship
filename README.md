@@ -1,4 +1,4 @@
-Credit card default prediction
+<h1>Credit card default prediction</h1>
 Problem Statement : Credit Card Default Prediction
 The problem at hand is to develop a predictive model that can accurately predict whether a credit card holder is likely to default on their payments in the near future. Predicting credit card defaults is crucial for financial institutions to assess the risk associated with extending credit and make informed decisions about lending.
 
@@ -28,4 +28,5 @@ Python
 Framework used:
 Flask
 Scikit-learn
-Presentation
+Contributer
+Rehan Alvi
