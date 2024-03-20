@@ -1,0 +1,15 @@
+artifact_uri: file:///D:/Credit_card_internship/mlruns/0/2c935b15e8a94ba786a6034575a8138d/artifacts
+end_time: 1710931921193
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 2c935b15e8a94ba786a6034575a8138d
+run_name: loud-bat-935
+run_uuid: 2c935b15e8a94ba786a6034575a8138d
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1710931908641
+status: 3
+tags: []
+user_id: rehan
