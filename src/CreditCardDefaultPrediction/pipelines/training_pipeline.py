@@ -7,6 +7,7 @@ import pandas as pd
 from src.CreditCardDefaultPrediction.components.data_ingestion import DataIngestion
 from src.CreditCardDefaultPrediction.components.data_transformation import DataTransformation
 from src.CreditCardDefaultPrediction.components.model_trainer import ModelTrainer
+from src.CreditCardDefaultPrediction.components.model_evaluation import ModelEvaluation
 
 class TrainingPipeline:
     def __init__(self):
@@ -22,6 +23,9 @@ class TrainingPipeline:
 
             model_trainer = ModelTrainer()
             best_model, best_model_score = model_trainer.initiate_model_training(train_arr, test_arr)
+
+            model_eval_obj = ModelEvaluation()
+            model_eval_obj.initiate_model_evaluation(train_arr,test_arr)
 
             return best_model, best_model_score
 

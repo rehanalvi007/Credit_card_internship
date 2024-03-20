@@ -47,3 +47,5 @@ class ModelEvaluation:
                 #This condition is for local    
                 else:
                     mlflow.sklearn.log_model(model, "model")
+        except Exception as e:
+            raise e
