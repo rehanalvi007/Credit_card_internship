@@ -1,0 +1,15 @@
+artifact_uri: file:///D:/Credit_card_internship/mlruns/0/10f9b79633904dfc90a66526596c2bb4/artifacts
+end_time: 1711005245093
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 10f9b79633904dfc90a66526596c2bb4
+run_name: calm-cat-514
+run_uuid: 10f9b79633904dfc90a66526596c2bb4
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1711005236697
+status: 3
+tags: []
+user_id: rehan
