@@ -23,6 +23,38 @@ except Exception as e:
 try:
     @app.route('/prediction', methods=['POST'])
     def prediction():
+        # Get form data
+        limit_bal = request.form.get('LIMIT_BAL')
+        sex = request.form.get('SEX')
+        education = request.form.get('EDUCATION')
+        marriage = request.form.get('MARRIAGE')
+        age = request.form.get('AGE')
+        pay_0 = request.form.get('PAY_0')
+        pay_2 = request.form.get('PAY_2')
+        pay_3 = request.form.get('PAY_3')
+        pay_4 = request.form.get('PAY_4')
+        pay_5 = request.form.get('PAY_5')
+        pay_6 = request.form.get('PAY_6')
+        bill_amt1 = request.form.get('BILL_AMT1')
+        bill_amt2 = request.form.get('BILL_AMT2')
+        bill_amt3 = request.form.get('BILL_AMT3')
+        bill_amt4 = request.form.get('BILL_AMT4')
+        bill_amt5 = request.form.get('BILL_AMT5')
+        bill_amt6 = request.form.get('BILL_AMT6')
+        pay_amt1 = request.form.get('PAY_AMT1')
+        pay_amt2 = request.form.get('PAY_AMT2')
+        pay_amt3 = request.form.get('PAY_AMT3')
+        pay_amt4 = request.form.get('PAY_AMT4')
+        pay_amt5 = request.form.get('PAY_AMT5')
+        pay_amt6 = request.form.get('PAY_AMT6')
+
+        # Check for empty values
+        if any(value == '' for value in [limit_bal, sex, education, marriage, age, pay_0, pay_2, pay_3, pay_4, pay_5, pay_6,
+                                         bill_amt1, bill_amt2, bill_amt3, bill_amt4, bill_amt5, bill_amt6,
+                                         pay_amt1, pay_amt2, pay_amt3, pay_amt4, pay_amt5, pay_amt6]):
+            error_message = "All fields are required. Please fill out the form completely."
+            return render_template('form.html', error_message=error_message)
+
         data = CustomDataset()
         data_frame = data.get_data_as_dataframe(LIMIT_BAL=float(request.form.get('LIMIT_BAL')),
                                                 SEX=int(request.form.get('SEX')),
