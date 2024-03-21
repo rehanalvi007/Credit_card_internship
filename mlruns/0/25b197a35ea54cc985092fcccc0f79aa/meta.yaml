@@ -1,0 +1,15 @@
+artifact_uri: file:///D:/Credit_card_internship/mlruns/0/25b197a35ea54cc985092fcccc0f79aa/artifacts
+end_time: 1711011068272
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 25b197a35ea54cc985092fcccc0f79aa
+run_name: ambitious-tern-476
+run_uuid: 25b197a35ea54cc985092fcccc0f79aa
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1711011060026
+status: 3
+tags: []
+user_id: rehan

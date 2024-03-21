@@ -10,9 +10,10 @@ from dataclasses import dataclass
 from sklearn.linear_model import LogisticRegression
 from sklearn.svm import SVC
 from sklearn.tree import DecisionTreeClassifier
-from sklearn.ensemble import RandomForestClassifier
+from sklearn.ensemble import RandomForestClassifier,GradientBoostingClassifier
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.naive_bayes import GaussianNB
+from sklearn.ensemble import AdaBoostClassifier
 
 
 @dataclass
@@ -42,7 +43,9 @@ class ModelTrainer:
                                        criterion='entropy'): 'Decision Tree',
                 RandomForestClassifier(n_estimators=200, max_depth=10, min_samples_split=4, min_samples_leaf=5,
                                        max_features='sqrt'): 'Random Forest',
-                GaussianNB(): 'Naiye Bayes'
+                GaussianNB(): 'Naiye Bayes',
+                AdaBoostClassifier(algorithm="SAMME"): 'AdaBoosting',
+                GradientBoostingClassifier(): 'GradientBoosting'
             }
 
             results = {}
