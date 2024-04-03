@@ -1,0 +1,15 @@
+artifact_uri: file:///D:/Credit_card_internship/mlruns/0/08474f0baa4040088244a458207a795c/artifacts
+end_time: 1711954636506
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 08474f0baa4040088244a458207a795c
+run_name: upbeat-smelt-33
+run_uuid: 08474f0baa4040088244a458207a795c
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1711954627349
+status: 3
+tags: []
+user_id: rehan

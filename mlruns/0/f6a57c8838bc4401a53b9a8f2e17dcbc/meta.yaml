@@ -1,0 +1,15 @@
+artifact_uri: file:///D:/Credit_card_internship/mlruns/0/f6a57c8838bc4401a53b9a8f2e17dcbc/artifacts
+end_time: 1711993394435
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: f6a57c8838bc4401a53b9a8f2e17dcbc
+run_name: languid-trout-616
+run_uuid: f6a57c8838bc4401a53b9a8f2e17dcbc
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1711993385822
+status: 3
+tags: []
+user_id: rehan

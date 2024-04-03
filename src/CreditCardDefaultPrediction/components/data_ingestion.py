@@ -7,7 +7,7 @@ from src.CreditCardDefaultPrediction.exception import CustomException
 from sklearn.model_selection import train_test_split
 import pandas as pd
 from dataclasses import dataclass
-
+ 
 
 # Initialize the data ingestion configuration
 
